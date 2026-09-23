@@ -69,3 +69,12 @@
 - ไฟล์ที่สร้าง/แก้: backend/app/__init__.py, backend/app/db/__init__.py, backend/app/db/models.py, backend/app/db/session.py, backend/app/db/migrations/__init__.py, backend/app/db/migrations/001_init.py, backend/tests/test_T_01_schema.py
 - ผล test: `cd backend && pytest tests/test_T_01_schema.py -q` ผ่าน
 - สิ่งที่เกือบต้องเดาแต่ถามแทน: ไม่มี เพราะ task T-01 ไม่มี Open Question และคำสั่งใช้ข้อมูลจาก spec.md + plan.md อย่างตรงไปตรงมา
+
+---
+
+## 2569-09-23 เวลาไม่ระบุ คำสั่ง: /implement T-09
+
+- เครื่องมือ: Copilot ใน Codespaces
+- ไฟล์ที่สร้าง/แก้: frontend/src/pages/SlotPicker.jsx, frontend/src/__tests__/SlotPicker.test.jsx
+- ผล test: `cd frontend && npm test -- --run src/__tests__/SlotPicker.test.jsx` ผ่าน (2/2 tests passed)
+- สิ่งที่เกือบต้องเดาแต่ถามแทน: ไม่มี เพราะ UI ทำตามสัญญา API ใน plan.md และ task ไม่ต้องใช้ Open Question

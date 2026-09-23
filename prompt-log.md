@@ -49,3 +49,23 @@
 - ผลลัพธ์: ปรับปรุง `specs/001-booking/plan.md` ให้มี 8 หัวข้อตาม prompt โดยอ้างอิง ID จาก `specs/001-booking/spec.md`
 - Constraint ที่ AI ยังไม่ได้ใช้: ไม่มี ทุก Constraint (`CON-TECH-01`, `DOM-PDPA-01`, `IF-IDP-01`, `IF-HIS-01`, `IF-NOT-01`) ถูกระบุในตารางตรวจ Constraints แล้ว
 - สิ่งที่ AI บอกว่าอยากเดาแต่ไม่ได้เดา: ไม่เดาคำตอบของ `Q-01`, `Q-03` ถึง `Q-08`; เลื่อนรายละเอียดที่ขึ้นกับคำถามเหล่านี้ไว้ในหัวข้อสิ่งที่ยังไม่ทำ
+
+---
+
+## 2569-09-23 เวลาไม่ระบุ คำสั่ง: /tasks
+
+- เครื่องมือ: Copilot ใน Codespaces
+- ไฟล์: specs/001-booking/tasks.md
+- ผลลัพธ์: สร้างไฟล์ `specs/001-booking/tasks.md` ที่แยกงานย่อยตามลำดับพึ่งพา พร้อม traceability ถึง AC และ Constraint ทั้งหมด ใน spec.md
+- จำนวน task ทั้งหมด: 14 task
+- จำนวน task ที่ต้องรอ Open Question: 1 task (`Q-02`)
+- สิ่งที่ AI ระวัง: ไม่สร้าง task ที่เกิน scope / ไม่เดาคำตอบ Open Question และยึดตาม plan.md เป็นแหล่งเทคโนโลยีเดียว
+
+---
+
+## 2569-09-23 เวลาไม่ระบุ คำสั่ง: /implement T-01
+
+- เครื่องมือ: Copilot ใน Codespaces
+- ไฟล์ที่สร้าง/แก้: backend/app/__init__.py, backend/app/db/__init__.py, backend/app/db/models.py, backend/app/db/session.py, backend/app/db/migrations/__init__.py, backend/app/db/migrations/001_init.py, backend/tests/test_T_01_schema.py
+- ผล test: `cd backend && pytest tests/test_T_01_schema.py -q` ผ่าน
+- สิ่งที่เกือบต้องเดาแต่ถามแทน: ไม่มี เพราะ task T-01 ไม่มี Open Question และคำสั่งใช้ข้อมูลจาก spec.md + plan.md อย่างตรงไปตรงมา

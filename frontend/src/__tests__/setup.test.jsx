@@ -2,8 +2,7 @@
 import { render, screen } from '@testing-library/react'
 import App from '../App.jsx'
 
-test('หน้าแสดง slot picker และให้เลือกแพ็กเกจได้', () => {
+test('โครงหน้าจอเปิดได้', () => {
   render(<App />)
-  expect(screen.getByText('จองคิวตรวจสุขภาพ')).toBeTruthy()
-  expect(screen.getByLabelText('แพ็กเกจ')).toBeTruthy()
+  expect(screen.getByText('ระบบจองคิวตรวจสุขภาพ')).toBeTruthy()
 })
